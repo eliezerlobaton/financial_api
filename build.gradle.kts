@@ -28,7 +28,7 @@ repositories {
     mavenCentral()
 }
 
-val mapStructVersion = "1.6.3"
+var mapStructVersion = "1.6.3"
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -58,10 +58,6 @@ dependencies {
 
 tasks.withType<Test> {
     useJUnitPlatform()
-}
-
-tasks.named<Test>("test") {
-    systemProperty("spring.profiles.active", "dev")
 }
 
 tasks.named("build") {
